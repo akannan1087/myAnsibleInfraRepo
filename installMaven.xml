@@ -1,0 +1,8 @@
+---
+- hosts: My_Group
+  tasks:
+    - name: install maven on your local Ubuntu machine
+      become: yes
+      apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time=3600
+      with_items:
+        - maven
