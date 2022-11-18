@@ -4,6 +4,7 @@
    connection: local
    gather_facts: False
    tags: provisioning
+   become: yes
 
    vars:
      keypair: mySep22Key
