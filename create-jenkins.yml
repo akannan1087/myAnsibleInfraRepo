@@ -4,7 +4,6 @@
    connection: local
    gather_facts: False
    tags: provisioning
-   become: yes
 
    vars:
      keypair: mySep22Key
@@ -56,11 +55,3 @@
                       keypair={{ keypair }}
                       count={{count}}
        register: ec2
-
-
-     - name: Add the newly created EC2 to the local host group
-       local_action: lineinfile
-                     dest="/etc/ansible/hosts"
-                     regexp={{ item.public_ip }}
-                     insertafter="[webserver]" line={{ item.public_ip }}
-       with_items: "{{ ec2.instances }}"
