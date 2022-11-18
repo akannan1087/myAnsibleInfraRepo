@@ -6,13 +6,13 @@
    tags: provisioning
 
    vars:
-     keypair: myAug2019Key
+     keypair: mySep22Key
      instance_type: t2.micro
-     image: ami-916f59f4
+     image: ami-0ee23bfc74a881de5
      wait: yes
      group: webserver
      count: 1
-     region: us-east-2
+     region: us-east-1
      security_group: jenkins-security-group
    
    tasks:
