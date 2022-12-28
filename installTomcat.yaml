@@ -1,0 +1,13 @@
+---
+- hosts: My_Group
+  tasks:
+    - name: Install Tomcat 9 using Ansible
+      become: yes
+      apt:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+           - tomcat9
+           - tomcat9-examples
+           - tomcat9-docs
