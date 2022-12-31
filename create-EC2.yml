@@ -1,5 +1,5 @@
 ---
- - name:  provisioning EC2 Lab Exercises using Ansible
+ - name:  provisioning a new EC2 using Ansible playbook
    hosts: localhost
    connection: local
    gather_facts: False
@@ -13,7 +13,7 @@
      group: webserver
      count: 1
      region: us-east-1
-     security_group: jenkins-security-group
+     security_group: ec2-security-group
    
    tasks:
 
