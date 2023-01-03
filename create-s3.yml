@@ -1,0 +1,21 @@
+---
+ - name:  provisioning S3 Bucket using Ansible playbook
+   hosts: localhost
+   connection: local
+   gather_facts: False
+   tags: provisioning
+
+   tasks:
+     - name: create S3 bucket
+       s3_bucket:
+         name: myansibles3bucket312
+         state: present
+         region: us-east-1
+         versioning: yes
+         tags:
+           name: myansiblebucket
+           type: example
+       register: s3_url
+
+     - name: Display s3 url
+       debug: var=s3_url
