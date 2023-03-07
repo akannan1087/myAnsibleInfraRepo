@@ -8,7 +8,7 @@
    tasks:
      - name: create S3 bucket
        s3_bucket:
-         name: myansibles3bucket312
+         name: myansibles3bucket123
          state: present
          region: us-east-1
          versioning: yes
