@@ -6,9 +6,9 @@
    tags: provisioning
 
    vars:
-     keypair: mySep22Key
+     keypair: kube
      instance_type: t2.micro
-     image: ami-0ee23bfc74a881de5
+     image: ami-02eb7a4783e7e9317
      wait: yes
      group: webserver
      count: 1
