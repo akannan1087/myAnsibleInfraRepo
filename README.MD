@@ -5,7 +5,7 @@ Ansible plug-in is installed in Jenkins.
 Make sure you create an IAM role with AmazonEC2FullAccess policy and attach the role to Jenkins EC2 instance.
 Playbook for creating new EC2 instance needs to be created but you can refer my GitHub Repo
 
-please refer my website for step by step instructions - www.coachdevops.com
+please refer my website for step by step instructions - https://www.coachdevops.com/2022/12/automate-ec2-provisioning-in-aws-using.html
 
 Create Ansible playbook for provisioning EC2 instance
 
